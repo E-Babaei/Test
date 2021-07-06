@@ -384,3 +384,35 @@ a {
   top: -5px;
   right: 5%;
 }
+
+/* Media */
+.media {
+  display: flex;
+}
+
+.media__body {
+  margin: 0 2rem;
+}
+
+.media__title {
+  margin-top: 0;
+  font-size: 2.4rem;
+}
+
+.media__desc {
+  font-size: 2rem;
+}
+
+.media__img {
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .media__title {
+    font-size: 1.8rem;
+  }
+
+  .media__desc {
+    font-size: 1.8rem;
+  }
+}
