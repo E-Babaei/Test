@@ -592,6 +592,7 @@ a {
 
 .collapsible__heading {
   margin-top: 0;
+  font-size: 3rem;
 }
 
 .collapsible__chevron {
@@ -613,4 +614,44 @@ a {
 .collapsible--expanded .collapsible__chevron {
   transform: rotate(0);
   transition: transform 0.3s;
+}
+
+/* Blocks */
+
+.block {
+  --padding-block-vertical: 7rem;
+  padding: var(--padding-block-vertical) 2rem;
+}
+
+.block__heading {
+  margin-top: 0;
+}
+
+.block--black {
+  background: #000;
+}
+
+.block--black .block__content {
+  color: #b9c3cf;
+}
+
+.block--black .block__heading {
+  color: #fff;
+}
+
+.block--skewed-left {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  padding: calc(var(--padding-block-vertical) + 4rem) 2rem;
+}
+.block--skewed-right {
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  padding: calc(var(--padding-block-vertical) + 4rem) 2rem;
+}
+
+.block__header {
+  text-align: center;
+}
+
+.block__container {
+  max-width: 1140px;
 }
