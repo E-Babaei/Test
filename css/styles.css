@@ -15,7 +15,13 @@
 *::before {
   box-sizing: border-box;
 }
+
 /* Typography */
+::selection {
+  background: var(--color-primary);
+  color: #fff;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -140,7 +146,7 @@ a {
 
 .list {
   list-style: none;
-  color: var(--color-heading);
+
   padding-left: 0;
 }
 
@@ -151,6 +157,7 @@ a {
 }
 
 .list--tick {
+  color: var(--color-heading);
   list-style-image: url("../images/tick.svg");
   padding-left: 3rem;
 }
@@ -430,6 +437,7 @@ a {
 /* Media */
 .media {
   display: flex;
+  margin-bottom: 4rem;
 }
 
 .media__body {
@@ -439,6 +447,7 @@ a {
 .media__title {
   margin-top: 0;
   font-size: 2.4rem;
+  font-weight: 500;
 }
 
 .media__desc {
@@ -662,16 +671,18 @@ a {
   color: #b9c3cf;
 }
 
-.block--black .block__heading {
+.block--black h1,
+.block--black h2,
+.block--black h3 {
   color: #fff;
 }
 
 .block--skewed-left {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
   padding: calc(var(--padding-block-vertical) + 4rem) 2rem;
 }
 .block--skewed-right {
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   padding: calc(var(--padding-block-vertical) + 4rem) 2rem;
 }
 
@@ -747,10 +758,6 @@ a {
 }
 
 /* Hero blocks */
-
-.hero {
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-}
 
 .hero__tagline {
   font-size: 2rem;
@@ -832,5 +839,28 @@ a {
 @media screen and (min-width: 768px) {
   .feature:nth-of-type(even) .feature__heading {
     order: 2;
+  }
+}
+
+/* Showcase block */
+
+.block-showcase__img > img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .block-showcase__img {
+    width: auto;
+    max-width: 700px;
+    justify-self: end;
+  }
+
+  .block-showcase__img > img {
+    width: auto;
+    max-width: 700px;
+  }
+
+  .block-showcase .grid {
+    grid-template-columns: 50% 50%;
   }
 }
