@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "build": "parcel build index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -10,7 +11,7 @@
   "license": "ISC",
   "devDependencies": {
     "cssnano": "^4.1.11",
-    "parcel-bundler": "^1.6.2"
+    "parcel-bundler": "^1.12.3"
   },
   "dependencies": {
     "abab": "^2.0.5",
