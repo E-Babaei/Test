@@ -661,6 +661,11 @@ a {
   padding: var(--padding-block-vertical) 2rem;
 }
 
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
 .block__heading {
   margin-top: 0;
 }
@@ -956,4 +961,10 @@ a {
     max-height: 100%;
     opacity: 1;
   }
+}
+
+/* Callout sign up */
+
+.callout-signup {
+  transform: translateY(5rem);
 }
